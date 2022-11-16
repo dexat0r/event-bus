@@ -1,0 +1,15 @@
+{
+  "name": "event-bus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "types": "lib/index.d.ts",
+  "author": "dexat0r <nikit-balak@yandex.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "js-event-bus": "^1.1.1"
+  }
+}
