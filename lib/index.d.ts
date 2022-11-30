@@ -1,14 +1,10 @@
 declare module EventBus {
-    class Message {
-        onResponse(): any | Promise<any>;
-    }
-
     export class EventBus {
-        pub<T>(queue: string, meta: T): void;
-        sub<T>(queue: string, callback: (meta: T) => any): void;
-        once<T>(queue: string, callback: (meta: T) => any): void;
-        unsubcribe<T>(queue: string, callback: ((meta: T) => any)[]): void;
-        safeSub<T>(queue: string, callback: (meta: T, msg: Message) => any): void;
-        safePub<T>(queue: string, meta: T): Message
+        pub<T>(resource: string, topic: string, meta: T): void;
+        sub<T>(resource: string, topic: string, callback: (meta: T) => any): void;
+        once<T>(resource: string, topic: string, callback: (meta: T) => any): void;
+        unsubcribe<T>(resource: string, topic: string, callback: ((meta: T) => any)[]): void;
+        safeSub<T>(resource: string, topic: string, callback: (meta: T) => any): void;
+        safePub<T>(resource: string, topic: string, meta: T): Promise<>
     }
 }
