@@ -2,6 +2,7 @@ const bus = require("../lib/index.js");
 const chai = require("chai");
 const expect = chai.expect;
 const chaiAsPromised = require("chai-as-promised");
+const pino = require('pino');
 
 chai.use(chaiAsPromised);
 chai.should();
@@ -12,7 +13,11 @@ describe("Pub-sub unit tests", () => {
     this._bus;
 
     beforeEach(() => {
-        this._bus = new bus();
+        this._bus = new bus({
+            logger: pino({
+                level: 'debug'
+            })
+        });
     });
 
     it("Should subscribe on test events and receive data after publish", () => {
