@@ -39,7 +39,7 @@ declare class EventBus {
      * Unsubscribe from resource.topic
      * @param {string} resource resource
      * @param {string} topic topic
-     * @param {(Function | Funtion[] | undefined)} handlerArray handlers to remove. If undefined removes all handlers
+     * @param {(Function | Function[] | undefined)} handlerArray handlers to remove. If undefined removes all handlers
      */
     public unsubcribe<T = any, K = unknown>(
         resource: string,
