@@ -18,6 +18,7 @@ describe("Pub-sub unit tests", () => {
                 level: 'debug'
             })
         });
+        console.log('\n');
     });
 
     it("Should subscribe on test events and receive data after publish", () => {
